@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd 
 st.set_page_config(page_title = 'Movies Data' , page_icon='🎞️')
 
-df = pd.read_csv("25k IMDb movie Dataset cleand.csv").sample(50)
+df = pd.read_csv("25k IMDb movie Dataset cleand.csv").sample(10)
 df.reset_index(inplace=True)
 filter_list = ['Rating','Genres','Rating and Genres' , 'Director Name, Rating and Generes and year' ,  'Director Name, Rating , Generes and Time period']
 choies = st.selectbox('Select type of filter from here : ' , filter_list)
